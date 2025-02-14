@@ -35,7 +35,7 @@ const AnswerButtons = ({ onYesClick }: AnswerButtonsProps) => {
   };
 
   return (
-    <div className="flex gap-4 items-center justify-center mt-8">
+    <div className="flex flex-col gap-4 items-center justify-center mt-8">
       <button
         onClick={handleYesClick}
         className="px-8 py-4 bg-valentine-500 text-white rounded-full hover:bg-valentine-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-semibold text-lg"
