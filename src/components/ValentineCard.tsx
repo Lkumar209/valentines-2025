@@ -12,7 +12,7 @@ const ValentineCard = () => {
         className="px-8 py-4 bg-valentine-500 text-white rounded-full hover:bg-valentine-600 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 shadow-lg hover:shadow-xl font-semibold text-lg"
       >
         <Heart size={24} className="animate-heartbeat" fill="currentColor" />
-        Open Valentine's Card
+        {isOpen ? 'Close Valentine\'s Card' : 'Open Valentine\'s Card'}
       </button>
       
       {isOpen && (

@@ -8,6 +8,7 @@ interface AnswerButtonsProps {
 
 const AnswerButtons = ({ onYesClick }: AnswerButtonsProps) => {
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
+  const [showMessage, setShowMessage] = useState(false);
   const noButtonRef = useRef<HTMLButtonElement>(null);
 
   const handleMouseOver = () => {
@@ -16,6 +17,11 @@ const AnswerButtons = ({ onYesClick }: AnswerButtonsProps) => {
       const newY = Math.random() * (window.innerHeight - 50);
       setNoButtonPosition({ x: newX, y: newY });
     }
+  };
+
+  const handleNoClick = () => {
+    setShowMessage(true);
+    setTimeout(() => setShowMessage(false), 3000); // Hide message after 3 seconds
   };
 
   const handleYesClick = () => {
@@ -38,6 +44,7 @@ const AnswerButtons = ({ onYesClick }: AnswerButtonsProps) => {
       </button>
       <button
         ref={noButtonRef}
+        onClick={handleNoClick}
         onMouseEnter={handleMouseOver}
         style={{
           position: 'absolute',
@@ -49,6 +56,11 @@ const AnswerButtons = ({ onYesClick }: AnswerButtonsProps) => {
       >
         No
       </button>
+      {showMessage && (
+        <div className="fixed top-4 right-4 bg-valentine-500 text-white p-4 rounded-lg shadow-xl animate-fade-in">
+          <p className="font-semibold">Nice try! We're already dating, silly! 🥰</p>
+        </div>
+      )}
     </div>
   );
 };
