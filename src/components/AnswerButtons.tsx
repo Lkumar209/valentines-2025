@@ -32,7 +32,7 @@ const AnswerButtons = ({ onYesClick }: AnswerButtonsProps) => {
     <div className="flex gap-4 items-center justify-center mt-8">
       <button
         onClick={handleYesClick}
-        className="px-8 py-3 bg-valentine-500 text-white rounded-full hover:bg-valentine-600 transition-all duration-300 transform hover:scale-105"
+        className="px-8 py-4 bg-valentine-500 text-white rounded-full hover:bg-valentine-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-semibold text-lg"
       >
         Yes
       </button>
@@ -45,7 +45,7 @@ const AnswerButtons = ({ onYesClick }: AnswerButtonsProps) => {
           top: `${noButtonPosition.y}px`,
           transition: 'all 0.3s ease'
         }}
-        className="px-8 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300"
+        className="px-8 py-4 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 shadow-lg hover:shadow-xl font-semibold text-lg"
       >
         No
       </button>

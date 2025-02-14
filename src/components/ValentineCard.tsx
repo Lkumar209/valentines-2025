@@ -6,18 +6,18 @@ const ValentineCard = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="mt-8">
+    <div className="mt-8 flex flex-col items-center">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="px-6 py-3 bg-valentine-500 text-white rounded-full hover:bg-valentine-600 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+        className="px-8 py-4 bg-valentine-500 text-white rounded-full hover:bg-valentine-600 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 shadow-lg hover:shadow-xl font-semibold text-lg"
       >
-        <Heart size={20} className="animate-heartbeat" />
+        <Heart size={24} className="animate-heartbeat" fill="currentColor" />
         Open Valentine's Card
       </button>
       
       {isOpen && (
-        <div className="mt-6 max-w-2xl mx-auto animate-fade-in">
-          <div className="relative bg-white p-8 rounded-lg shadow-lg border-4 border-valentine-200">
+        <div className="mt-8 max-w-2xl mx-auto animate-fade-in w-full">
+          <div className="relative bg-white p-8 rounded-lg shadow-xl border-4 border-valentine-200 mx-4">
             <div className="absolute -top-4 -left-4">
               <Heart fill="#FF6B81" size={32} />
             </div>
